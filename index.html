@@ -4,249 +4,782 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rupesh | CSE Student</title>
+    <title>M V Lakshmi Narasimha Rupesh | Portfolio</title>
+
+    <meta name="description"
+          content="Portfolio of M V Lakshmi Narasimha Rupesh, Integrated M.Tech CSE student at VIT-AP exploring AI/ML and Web Development.">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f7fa;
-            color: #222;
-        }
-
-        header {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
-
-        header p {
-            font-size: 18px;
-            margin-top: 12px;
-            color: #d1d5db;
-        }
-
-        nav {
-            margin-top: 25px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-        }
-
-        nav a:hover {
-            color: #60a5fa;
-        }
-
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 25px;
-        }
-
-        h2 {
-            color: #111827;
-            border-bottom: 2px solid #2563eb;
-            padding-bottom: 8px;
-        }
-
-        .card {
-            background: white;
-            padding: 22px;
-            margin-top: 18px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-        }
-
-        .skills span {
-            display: inline-block;
-            background: #e5e7eb;
-            padding: 8px 13px;
-            margin: 5px;
-            border-radius: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0d0c;
+            color: #f2f2f2;
+            line-height: 1.6;
         }
 
         a {
-            color: #2563eb;
+            text-decoration: none;
+            color: inherit;
         }
 
-        footer {
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 13, 12, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1d2420;
+        }
+
+        .nav-container {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #7cff9b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #b8c0bb;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #7cff9b;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hello {
+            color: #7cff9b;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #7cff9b;
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            color: #d1d6d3;
+            margin-bottom: 12px;
+        }
+
+        .hero-description {
+            color: #89928c;
+            max-width: 650px;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border-radius: 8px;
+            border: 1px solid #7cff9b;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #7cff9b;
+            color: #071009;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(124, 255, 155, 0.15);
+        }
+
+        .btn-secondary {
+            color: #7cff9b;
+        }
+
+        .btn-secondary:hover {
+            background: #7cff9b;
+            color: #071009;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .section-title span {
+            color: #7cff9b;
+        }
+
+        .section-line {
+            width: 55px;
+            height: 3px;
+            background: #7cff9b;
+            margin-bottom: 35px;
+        }
+
+        .section-text {
+            color: #a5ada8;
+            max-width: 800px;
+            font-size: 16px;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-info {
+            border-left: 2px solid #7cff9b;
+            padding-left: 25px;
+        }
+
+        .about-info p {
+            margin-bottom: 15px;
+            color: #a5ada8;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .skill {
+            padding: 10px 17px;
+            border: 1px solid #26302a;
+            background: #111512;
+            border-radius: 8px;
+            color: #dce2de;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #7cff9b;
+            color: #7cff9b;
+            transform: translateY(-3px);
+        }
+
+        /* PROJECT */
+
+        .project-card {
+            background: #101311;
+            border: 1px solid #202822;
+            border-radius: 14px;
+            padding: 32px;
+            max-width: 900px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #7cff9b;
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            color: #7cff9b;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+            color: #a5ada8;
+        }
+
+        .project-card li {
+            margin-bottom: 10px;
+        }
+
+        /* EDUCATION */
+
+        .education-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .education-card {
+            padding: 24px;
+            background: #101311;
+            border: 1px solid #202822;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            border-color: #7cff9b;
+        }
+
+        .education-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .education-card .institution {
+            color: #7cff9b;
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            color: #929b95;
+        }
+
+        /* CERTIFICATIONS */
+
+        .cert-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .cert-card {
+            padding: 20px 24px;
+            background: #101311;
+            border-left: 3px solid #7cff9b;
+            border-radius: 8px;
+        }
+
+        .cert-card h3 {
+            font-size: 17px;
+        }
+
+        .cert-card p {
+            color: #929b95;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
             text-align: center;
-            padding: 25px;
-            background: #111827;
-            color: #d1d5db;
-            margin-top: 50px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-box p {
+            color: #929b95;
+            margin: 15px 0 30px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #1d2420;
+            padding: 30px 0;
+            text-align: center;
+            color: #68716b;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 750px) {
+
+            .nav-container {
+                height: auto;
+                padding: 18px 0;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>M V Lakshmi Narasimha Rupesh</h1>
+    <!-- NAVBAR -->
 
-        <p>
-            Integrated M.Tech CSE Student |
-            Aspiring AI/ML & Web Developer
-        </p>
+    <nav>
+        <div class="container nav-container">
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+            <div class="logo">
+                MVR.
+            </div>
 
-
-    <section id="about">
-        <h2>About Me</h2>
-
-        <div class="card">
-            <p>
-                I am an Integrated M.Tech Computer Science and Engineering
-                student at VIT-AP University with an interest in Artificial
-                Intelligence, Machine Learning, and Web Development.
-            </p>
-
-            <p>
-                I enjoy learning programming, building practical projects,
-                and exploring new technologies. I am currently strengthening
-                my skills in Python, Java, C, HTML, DSA, and OOP.
-            </p>
-        </div>
-    </section>
-
-
-    <section id="education">
-        <h2>Education</h2>
-
-        <div class="card">
-            <h3>Integrated M.Tech in Computer Science and Engineering</h3>
-            <p><strong>VIT-AP University</strong></p>
-            <p>CGPA: 8.70 / 10 | Expected Graduation: 2030</p>
-        </div>
-
-        <div class="card">
-            <h3>Intermediate</h3>
-            <p><strong>Narayana Junior College</strong></p>
-            <p>Percentage: 96.1%</p>
-        </div>
-
-        <div class="card">
-            <h3>Secondary School</h3>
-            <p><strong>Vidya Mandir E.M High School</strong></p>
-            <p>Percentage: 78.6%</p>
-        </div>
-    </section>
-
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-
-        <div class="card skills">
-
-            <span>Python</span>
-            <span>Java</span>
-            <span>C</span>
-            <span>HTML</span>
-            <span>DSA</span>
-            <span>OOP</span>
-            <span>VS Code</span>
-            <span>DaVinci Resolve</span>
-
-        </div>
-    </section>
-
-
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="card">
-
-            <h3>
-                AI-Enabled Wireless Charging System
-                with Foreign Object Detection
-            </h3>
-
-            <p>
-                A hardware-based wireless charging prototype incorporating
-                foreign object detection for improved charging safety.
-            </p>
-
-            <p>
-                <strong>Technologies:</strong>
-                Arduino Uno, Ultrasonic Sensor,
-                Wireless Charging Module
-            </p>
-
-            <p>
-                <strong>My Contribution:</strong>
-                Researched the required components and independently
-                assembled the prototype.
-            </p>
-
-        </div>
-    </section>
-
-
-    <section id="certifications">
-        <h2>Certifications & Workshops</h2>
-
-        <div class="card">
-
-            <ul>
-                <li>MATLAB Course — Certificate of Completion</li>
-                <li>Creating Websites Using Claude — Workshop Participant</li>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
         </div>
-    </section>
+    </nav>
 
 
-    <section id="contact">
-        <h2>Contact</h2>
+    <!-- HERO -->
 
-        <div class="card">
+    <section class="hero">
 
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:munagarupesh@gmail.com">
-                    munagarupesh@gmail.com
-                </a>
+        <div class="container hero-content">
+
+            <div class="hello">
+                Hello, I'm
+            </div>
+
+            <h1>
+                M V Lakshmi<br>
+                Narasimha <span>Rupesh.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Integrated M.Tech CSE Student @ VIT-AP
             </p>
 
-            <p>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/lakshmi-narasimha-rupesh-m-v-93047843a"
+            <p class="hero-description">
+                Exploring Artificial Intelligence, Machine Learning and
+                Web Development while building practical projects and
+                strengthening my programming and problem-solving skills.
+            </p>
+
+            <div class="buttons">
+
+                <a class="btn btn-primary"
+                   href="https://github.com/munagarupesh-ops"
                    target="_blank">
-                    LinkedIn Profile
+                    GitHub
                 </a>
-            </p>
 
-            <p>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/munagarupesh-ops"
+                <a class="btn btn-secondary"
+                   href="https://www.linkedin.com/in/lakshmi-narasimha-rupesh-m-v-93047843a"
                    target="_blank">
-                    github.com/munagarupesh-ops
+                    LinkedIn
                 </a>
-            </p>
+
+            </div>
 
         </div>
+
     </section>
 
 
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
+
+            <div class="section-line"></div>
+
+            <div class="about-grid">
+
+                <div>
+                    <p class="section-text">
+                        I'm an Integrated M.Tech Computer Science and
+                        Engineering student at VIT-AP University with a
+                        strong interest in Artificial Intelligence,
+                        Machine Learning and Web Development.
+                    </p>
+
+                    <br>
+
+                    <p class="section-text">
+                        I enjoy learning through practical projects and
+                        exploring how technology can be used to solve
+                        real-world problems.
+                    </p>
+
+                    <br>
+
+                    <p class="section-text">
+                        Currently, I'm focused on strengthening my
+                        programming, data structures and problem-solving
+                        skills while exploring new areas of technology.
+                    </p>
+                </div>
+
+                <div class="about-info">
+
+                    <p>
+                        <strong>Degree:</strong><br>
+                        Integrated M.Tech in Computer Science & Engineering
+                    </p>
+
+                    <p>
+                        <strong>University:</strong><br>
+                        VIT-AP University
+                    </p>
+
+                    <p>
+                        <strong>CGPA:</strong><br>
+                        8.70 / 10
+                    </p>
+
+                    <p>
+                        <strong>Expected Graduation:</strong><br>
+                        2030
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Technical <span>Skills</span>
+            </h2>
+
+            <div class="section-line"></div>
+
+            <p class="section-text">
+                Technologies and core concepts I'm currently learning
+                and working with.
+            </p>
+
+            <div class="skills-grid">
+
+                <div class="skill">Python</div>
+                <div class="skill">Java</div>
+                <div class="skill">C</div>
+                <div class="skill">HTML</div>
+                <div class="skill">Data Structures</div>
+                <div class="skill">OOP</div>
+                <div class="skill">VS Code</div>
+                <div class="skill">DaVinci Resolve</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT -->
+
+    <section id="project">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Featured <span>Project</span>
+            </h2>
+
+            <div class="section-line"></div>
+
+            <div class="project-card">
+
+                <h3>
+                    AI-Enabled Wireless Charging System
+                    with Foreign Object Detection
+                </h3>
+
+                <div class="project-tech">
+                    Arduino Uno • Ultrasonic Sensor • Wireless Charging Module
+                </div>
+
+                <ul>
+
+                    <li>
+                        Designed and assembled a wireless charging
+                        prototype with a foreign object detection
+                        mechanism aimed at improving charging safety.
+                    </li>
+
+                    <li>
+                        Researched and integrated Arduino Uno,
+                        ultrasonic sensing and wireless charging
+                        components for object detection and charging
+                        control.
+                    </li>
+
+                    <li>
+                        Independently researched component requirements
+                        and assembled the prototype, gaining hands-on
+                        experience in hardware integration and
+                        embedded-system development.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                <span>Education</span>
+            </h2>
+
+            <div class="section-line"></div>
+
+            <div class="education-list">
+
+                <div class="education-card">
+
+                    <h3>
+                        Integrated M.Tech in Computer Science and Engineering
+                    </h3>
+
+                    <div class="institution">
+                        VIT-AP University
+                    </div>
+
+                    <p>
+                        CGPA: 8.70 / 10 &nbsp; | &nbsp;
+                        Expected Graduation: 2030
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Intermediate
+                    </h3>
+
+                    <div class="institution">
+                        Narayana Junior College
+                    </div>
+
+                    <p>
+                        Percentage: 93.66%
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Secondary School
+                    </h3>
+
+                    <div class="institution">
+                        Vidya Mandir E.M High School
+                    </div>
+
+                    <p>
+                        Percentage: 78.6%
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CERTIFICATIONS -->
+
+    <section id="certifications">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Certifications & <span>Workshops</span>
+            </h2>
+
+            <div class="section-line"></div>
+
+            <div class="cert-list">
+
+                <div class="cert-card">
+
+                    <h3>
+                        MATLAB Course
+                    </h3>
+
+                    <p>
+                        Certificate of Completion
+                    </p>
+
+                </div>
+
+
+                <div class="cert-card">
+
+                    <h3>
+                        Creating Websites Using Claude
+                    </h3>
+
+                    <p>
+                        Workshop Participant
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2 class="section-title">
+                    Let's <span>Connect</span>
+                </h2>
+
+                <div class="section-line"
+                     style="margin-left:auto;margin-right:auto;">
+                </div>
+
+                <p>
+                    I'm always interested in learning, building projects
+                    and connecting with people in the technology community.
+                </p>
+
+                <div class="buttons"
+                     style="justify-content:center;">
+
+                    <a class="btn btn-primary"
+                       href="mailto:munagarupesh@gmail.com">
+                        Email Me
+                    </a>
+
+                    <a class="btn btn-secondary"
+                       href="https://github.com/munagarupesh-ops"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+ 
+
     <footer>
-        © 2026 M V Lakshmi Narasimha Rupesh
+
+        <div class="container">
+
+            © 2026 M V Lakshmi Narasimha Rupesh.
+            Built with HTML & CSS.
+
+        </div>
+
     </footer>
 
 </body>
